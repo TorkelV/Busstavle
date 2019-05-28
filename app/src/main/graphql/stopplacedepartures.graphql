@@ -8,97 +8,17 @@ query StopPlaceDepartures($ids: [String]!, $start: DateTime!, $range: Int!, $dep
 }
 
 fragment estimatedCallFields on EstimatedCall {
-  aimedDepartureTime
   expectedDepartureTime
-  realtime
   forBoarding
-  forAlighting
   date
   destinationDisplay {
     frontText
   }
-  notices {
-    text
-  }
-  quay {
-    ...quayFields
-  }
   serviceJourney {
-    ...serviceJourneyFields
+    journeyPattern {
+      line {
+        publicCode
+      }
+    }
   }
-}
-
-fragment quayFields on Quay {
-  id
-  publicCode
-  description
-  situations {
-    ...situationFields
-  }
-}
-
-fragment serviceJourneyFields on ServiceJourney {
-  id
-  journeyPattern {
-    ...journeyPatternFields
-  }
-  notices {
-    text
-  }
-  transportSubmode
-  situations {
-    ...situationFields
-  }
-}
-
-fragment journeyPatternFields on JourneyPattern {
-  id
-  name
-  line {
-    ...lineFields
-  }
-  notices {
-    text
-  }
-}
-
-fragment lineFields on Line {
-  id
-  publicCode
-  name
-  transportMode
-  description
-  presentation {
-    colour
-    textColour
-  }
-  authority {
-    id
-    name
-  }
-  notices {
-    text
-  }
-  situations {
-    ...situationFields
-  }
-}
-
-fragment situationFields on PtSituationElement {
-  situationNumber
-  summary {
-    value
-  }
-  description {
-    value
-  }
-  detail {
-    value
-  }
-  validityPeriod {
-    startTime
-    endTime
-  }
-  reportType
-  infoLink
 }

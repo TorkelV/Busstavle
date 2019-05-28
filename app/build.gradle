@@ -26,7 +26,8 @@ apply plugin: 'com.apollographql.android'
 
 apollo {
     customTypeMapping = [
-            "DateTime" :"java.time.LocalDateTime"
+            "DateTime" :"java.time.LocalDateTime",
+            "Date" :"java.time.LocalDate"
     ]
 }
 
