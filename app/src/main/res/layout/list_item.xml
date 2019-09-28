@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#000">
+
+
+    <TextView
+            android:id="@+id/txt_busname"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="10dp"
+            android:textSize="20sp"
+            android:textColor="#FF8C00"
+            android:textStyle="bold"/>
+
+    <TextView
+            android:id="@+id/txt_busid"
+            android:textSize="20sp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_toEndOf="@+id/txt_busname"
+            android:layout_width="wrap_content"
+            android:textColor="#FF8C00"
+            android:layout_height="wrap_content"/>
+
+    <TextView
+            android:id="@+id/txt_busdeparture1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/txt_busname"
+            android:layout_marginLeft="20dp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="10dp"
+            android:textColor="#FF8C00"
+            android:textSize="20sp"/>
+
+    <TextView
+            android:id="@+id/txt_busdeparture2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/txt_busdeparture1"
+            android:layout_below="@+id/txt_busname"
+            android:layout_marginLeft="20dp"
+            android:layout_marginBottom="10dp"
+            android:textColor="#FF8C00"
+            android:layout_marginTop="10dp"
+            android:textSize="20sp"/>
+
+    <TextView
+            android:id="@+id/txt_busdeparture3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/txt_busname"
+            android:layout_toEndOf="@+id/txt_busdeparture2"
+            android:layout_marginLeft="20dp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="10dp"
+            android:textColor="#FF8C00"
+            android:textSize="20sp"/>
+
+</RelativeLayout>
